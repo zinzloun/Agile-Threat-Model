@@ -1,5 +1,8 @@
 # Simple framework to integrate threat modeling into Agile
 AKA a ethnographic approach to security development
+## Note
+The framework has been generated with the help of ChatGPT
+
 ## Why
 Bringing threat modeling into Agile using attacker-based user stories can make security risks more visible and manageable during development
 ## How
