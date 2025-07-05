@@ -41,3 +41,5 @@ Example:
     - Input validation is enforced
     - Prepared statements are used
     - Login failures are logged and rate-limited
+
+You can find more user's stories [here](samples_mal_us.md)
