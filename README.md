@@ -7,6 +7,7 @@ The framework has been generated with the help of ChatGPT
 Bringing threat modeling into Agile using attacker-based user stories can make security risks more visible and manageable during development
 ## How
 You're essentially flipping traditional user stories to write abuser stories or threat stories, which describe how an attacker might exploit weaknesses. These stories can then be addressed like any other backlog item.
+
 ## Follows a framework we can use
 #### 🧠 Structure of an Attacker Story
 
@@ -43,3 +44,6 @@ Example:
     - Login failures are logged and rate-limited
 
 You can find more user's stories [here](samples_mal_us.md)
+
+## Sample OWASP 10 (2021) Malicious User Stories
+[!MUS](
