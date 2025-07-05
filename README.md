@@ -46,4 +46,4 @@ Example:
 You can find more user's stories [here](samples_mal_us.md)
 
 ## Sample OWASP 10 (2021) Malicious User Stories
-[!MUS](
+[!MUS](mm-us-owasp.png)
