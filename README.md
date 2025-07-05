@@ -63,3 +63,29 @@ Follows an example of a catalog used to prioritize threats
 | T008   | Log Poisoning / WAF Bypass             | As an attacker, I want to obfuscate input to evade detection or logging             | Repudiation                | Medium       | Structured logging, encoding, input validation                                  | Log review automation, alerting on parsing failures   | AppSec                     | Medium               |
 | T009   | Insecure Design (Missing Rate Limits)  | As an attacker, I want to overload the system by flooding it with requests          | DoS, Tampering             | Medium       | Functional security design, performance testing                                 | App metrics, rate limit metrics                       | Product Owner              | Medium               |
 | T010   | Malicious CI/CD Artifact               | As an attacker, I want to inject malware via an automated build                     | Tampering                  | High         | Signed builds, artifact integrity checks, CI/CD isolation                       | CI audit logs, artifact hash verification             | DevOps Lead                | High                 |
+
+## Cons to keep in mind using this framewor
+
+1. Requires Threat Knowledge.
+Crafting meaningful abuser stories demands a solid understanding of threat modeling, attacker tactics (e.g., from MITRE ATT&CK), and the system architecture. Without that, the stories may be too generic or miss real threats.
+
+1. Risk of Overwhelming the Backlog
+Abuser stories can multiply quickly. If not prioritized well, they may clutter the backlog, dilute focus, or paralyze teams with too many “what if” scenarios.
+
+1. Hard to Define 'Done'
+It can be tricky to set clear acceptance criteria for security stories. “Secure” is often a moving target, and validating proper mitigation may require more effort than for functional stories.
+
+1. Potential for Team Pushback
+Dev teams unfamiliar with security practices might see abuser stories as a distraction from delivering features, especially under tight deadlines.
+
+1. Security Work May Be Deferred
+In Agile, lower-priority stories are often postponed. If security stories compete with feature stories, they may not be addressed in time, creating risks.
+
+1. Difficult to Automate
+Unlike functional tests, verifying security controls often requires manual testing or specialized tools. This reduces test coverage and slows feedback loops.
+
+1. Lack of Standardization
+There’s no common format or best practice for writing abuser stories, which can lead to inconsistency between teams and sprints.
+
+1. May Not Cover Non-Application Threats
+This approach focuses on application-level threats but may overlook infrastructure, supply chain, or human-factor risks unless expanded carefully.
