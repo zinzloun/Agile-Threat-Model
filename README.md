@@ -90,7 +90,7 @@ This approach focuses on application-level threats but may overlook infrastructu
 
 ### How to mitigate
 Generally to adopt such framework requires a high level of maturity in the organization, at least in the DevOP team about security and Agile. I'd say a "security culture" is needed, but here come the question what is a security culture?
-Greate resource is here: https://www.securityculturebook.com.
+A great resource is here: https://www.securityculturebook.com.
 Then having a SDLC in place is also of a great help, I'd say is a pre-requirements.
 
 ## Other things to keep in mind regarding Agile threat modeling is difficult in capturing Non-User Interaction threats
