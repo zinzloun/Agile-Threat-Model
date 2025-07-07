@@ -93,7 +93,7 @@ Generally to adopt such framework requires a high level of maturity in the organ
 A great resource is here: https://www.securityculturebook.com.
 Then having a SDLC in place is also of a great help, I'd say is a pre-requirements.
 
-## Other things to keep in mind regarding Agile threat modeling is difficult in capturing Non-User Interaction threats
+## Other things to keep in mind regarding Agile threat modeling is the difficulty in capturing Non-User interaction threats
 
 1. Harder to Express as “Stories”
     Abuser stories typically follow a pattern like: “As an attacker, I want to [do something] so that I can [achieve a goal].”
