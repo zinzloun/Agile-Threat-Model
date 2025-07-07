@@ -118,7 +118,7 @@ Then having a SDLC in place is also of a great help, I'd say is a pre-requiremen
 - Security Reviews for Integrations: Treat every API integration or background process as a potential threat surface, and run separate threat modeling sessions when needed.
 
 ## Conclusion
-Here I presented a non-structured approach to threat modeling in an Agile context. Every organization should shape this framework based on their specific needs. I can say that the process to implement it could be challenge and that at the moment is really in a beta version for me as well, but for sure it's a great fun! I'd say that the gamification here it's the key point.
+Here I presented a non-structured approach to threat modeling in an Agile context. Every organization should shape this framework based on their specific needs. I can say that the process to implement it could be challenge and that at the moment is really in a beta version for me as well, but for sure it's a great fun! Gamification can really help.
 
 <b>Remember: the journey is the destination</b> :)
 
