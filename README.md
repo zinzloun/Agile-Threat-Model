@@ -122,3 +122,52 @@ Here I presented a non-structured approach to threat modeling in an Agile contex
 
 <b>Remember: the journey is the destination</b> :)
 
+## Annex: a TM for SaaS applications
+Following an holistic approach to secure SaaS apps based on shared responsability model.
+
+1. Identity & Access Governance
+    - Authentication & Authorization
+    - Role lifecycle management (provisioning, de-provisioning, least privilege, JIT access)
+    - Consider insider threats (ex: orphaned accounts, excessive privileges).
+
+2. Tenant Isolation & Data Segregation
+   - In multi-tenant SaaS, you need to evaluate risks of data leakage across tenants. Even if infra is provider’s responsibility, consumers should validate provider assurances.
+
+3. Logging & Monitoring
+
+    - Ensure audit logs are enabled, immutable, and integrated into your SIEM/SOC.
+    - Consider API usage monitoring (abuse, brute force, token misuse).
+
+4. Incident Response & Business Continuity
+    - Do we have visibility into incidents in the SaaS app?
+    - Who owns and manages forensic data?
+    - What is the chain of custody?
+    - Are our RPO/RTO alignment with provider capabilities?
+
+5. API Security Beyond Tokens
+
+Rate limiting, schema validation, abuse detection.
+
+Ensure APIs don’t expose sensitive metadata (error handling, verbose messages).
+
+Configuration Management
+
+Misconfigurations are one of the top SaaS risks.
+
+Example: overly permissive sharing (documents, dashboards).
+
+Consider baseline configuration + periodic review.
+
+Third-Party Integrations
+
+SaaS apps often integrate with other SaaS (Slack, Salesforce, etc.).
+
+Threats: token sprawl, unvetted connectors, data leakage via plugins/webhooks.
+
+End-User Security Awareness / UX Risks
+
+Phishing targeting SaaS login portals.
+
+MFA fatigue attacks.
+
+Poor UX → users bypass controls (e.g., sharing files via personal email).
