@@ -123,7 +123,7 @@ Here I presented a non-structured approach to threat modeling in an Agile contex
 <b>Remember: the journey is the destination</b> :)
 
 ## Annex: a TM for SaaS applications ☁️ 
-Following an holistic approach to secure SaaS apps based on shared responsability model.
+Following an holistic approach to secure SaaS apps based on shared responsability model, generated with the help of AI
 
 1. Identity & Access Governance
     - Authentication & Authorization
@@ -165,7 +165,7 @@ Following an holistic approach to secure SaaS apps based on shared responsabilit
     - MFA bombing
     - Poor UX that leasds to users bypass controls (e.g., sharing files via personal email)
 
-### A general template back log with security user stories
+### A general template backlog with security user stories
 | Category                      | Threat Example                                                                 | Mitigation / Security User Story                                                                 | Priority |
 |-------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------|
 | **Data Management**           | Sensitive data misclassified → accidental exposure                              | As a data owner, I want to classify and label data so that protection policies are applied.      | High     |
@@ -193,7 +193,7 @@ Following an holistic approach to secure SaaS apps based on shared responsabilit
 | **End-User Security Awareness** | Phishing targeting SaaS login                                                   | As a user, I want phishing-resistant MFA so that stolen creds are useless.                       | Critical |
 |                               | MFA fatigue attacks                                                             | As a user, I want push-notification MFA with number matching so that fatigue attacks fail.       | High     |
 
-### Including priority, MITRE ATT&CK tactic & technique and acceptance criteria
+### Map backlog to MITRE ATT&CK tactic & technique with acceptance criteria
 
 | Category                       | Security Story Summary                                       | Priority  | ATT&CK Tactic         | ATT&CK Technique / Sub-technique                                                | Acceptance Criteria                                                                 |
 |--------------------------------|---------------------------------------------------------------|-----------|------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
