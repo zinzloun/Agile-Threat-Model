@@ -164,3 +164,31 @@ Following an holistic approach to secure SaaS apps based on shared responsabilit
     - Phishing targeting SaaS login portals
     - MFA bombing
     - Poor UX that leasds to users bypass controls (e.g., sharing files via personal email)
+
+### A template back log
+| Category                      | Threat Example                                                                 | Mitigation / Security User Story                                                                 | Priority |
+|-------------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------|
+| **Data Management**           | Sensitive data misclassified → accidental exposure                              | As a data owner, I want to classify and label data so that protection policies are applied.      | High     |
+|                               | Unauthorized access to shared docs                                              | As an admin, I want to enforce access reviews so that only intended users can access data.       | High     |
+| **Authentication & Authorization** | Stolen credentials or weak MFA → account takeover                            | As a user, I want MFA enforced so that stolen passwords are useless.                             | Critical |
+|                               | Long-lived API tokens abused by attackers                                       | As a developer, I want short-lived, scoped API tokens so that damage is minimized if leaked.     | High     |
+| **Data Protection**           | Data intercepted in transit                                                     | As a consumer, I want TLS 1.2+ enforced so that data in transit is protected.                    | Critical |
+|                               | Data at rest unencrypted by default                                             | As a security officer, I want to verify encryption at rest support so that data is safeguarded.  | High     |
+| **Plugin / Extension Mgmt**   | Malicious plugin installed by non-admin                                          | As an admin, I want only vetted plugins installable so that malicious code cannot run.           | Medium   |
+|                               | Plugin session persistence misused                                              | As an admin, I want plugin sessions limited so that persistence is controlled.                   | Medium   |
+| **Identity & Access Governance** | Orphaned accounts after offboarding                                            | As an IT admin, I want automated de-provisioning so that ex-employees cannot access systems.     | High     |
+|                               | Excessive privileges (no least privilege)                                        | As a security officer, I want RBAC with least privilege enforced so that risks are minimized.    | High     |
+| **Tenant Isolation**          | Data leakage across tenants                                                     | As a consumer, I want contractual guarantees of isolation so that my data isn’t exposed.         | Critical |
+|                               | Shared infrastructure vulnerabilities                                           | As a CISO, I want provider assurance of segmentation so that co-tenant attacks are prevented.    | High     |
+| **Logging & Monitoring**      | No visibility on user/API actions                                               | As a SOC analyst, I want detailed audit logs exported so that I can detect abnormal behavior.    | High     |
+|                               | Logs tampered or deleted                                                        | As a security officer, I want immutable log storage so that evidence can be preserved.           | High     |
+| **Incident Response & BCP**   | Provider incident without notification                                           | As a consumer, I want clear SLA and incident comms so that I can respond appropriately.          | Medium   |
+|                               | SaaS outage with data loss                                                      | As a business owner, I want RPO/RTO alignment so that continuity is ensured.                     | High     |
+| **API Security**              | API brute force or abuse                                                        | As a developer, I want rate limiting so that APIs are not abused.                                | High     |
+|                               | Excessive error details in API responses                                        | As a developer, I want standardized error handling so that sensitive info isn’t leaked.          | Medium   |
+| **Configuration Mgmt**        | Misconfigured sharing (public links, overexposed dashboards)                    | As an admin, I want security baselines and periodic reviews so that misconfigs are minimized.    | High     |
+|                               | Default insecure settings                                                       | As a security officer, I want hardening guides applied so that defaults are not risky.           | Medium   |
+| **Third-Party Integrations**  | Unvetted integrations exfiltrate data                                           | As an admin, I want approval workflows so that integrations are risk-assessed.                   | High     |
+|                               | Token sprawl across SaaS connectors                                             | As a developer, I want centralized token vaulting so that secrets are controlled.                | High     |
+| **End-User Security Awareness** | Phishing targeting SaaS login                                                   | As a user, I want phishing-resistant MFA so that stolen creds are useless.                       | Critical |
+|                               | MFA fatigue attacks                                                             | As a user, I want push-notification MFA with number matching so that fatigue attacks fail.       | High     |
