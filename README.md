@@ -123,7 +123,7 @@ Here I presented a non-structured approach to threat modeling in an Agile contex
 <b>Remember: the journey is the destination</b> :)
 
 ## Annex: a TM for SaaS applications ☁️ 
-Following an holistic approach to secure SaaS apps based on shared responsability model, generated with the help of AI
+<b>A holistic approach to secure SaaS apps based on shared responsability model, generated with the help of AI</b>
 
 1. Identity & Access Governance
     - Authentication & Authorization
