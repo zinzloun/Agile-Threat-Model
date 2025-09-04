@@ -213,4 +213,4 @@ Here I presented a non-structured approach to threat modeling in an Agile contex
 ### SaaS TM graphical representation
 Following the visual representation created in Miro, only the threats are shown. You can add green notes with mitigation user stories and place them next to the corresponding threat note. Since this approach may lead to a proliferation of notes on the diagram, it is advisable to create links pointing to the user stories instead.
 
-[![SaaS TM](./SaaS-TM.png)]
+![SaaS TM](./SaaS-TM.png)
