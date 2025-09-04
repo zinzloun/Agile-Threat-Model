@@ -130,30 +130,26 @@ A baseline set of critical, customer-configurable security controls for SaaS ven
 - Programmatic access to logs and configuration data
 - Visibility on IRP 
 
+In details we should consider these areas:
 
 1. Identity & Access Governance
-    - Authentication & Authorization
+    - Authentication & Authorization: integration with IdM
     - Role lifecycle management (provisioning, de-provisioning, least privilege, JIT access)
     - Consider insider threats (ex: orphaned accounts, excessive privileges)
 1. Data management
     - Data classification (labeling)
     - DLP strategies
-
 1. Tenant Isolation & Data Segregation
    - In multi-tenant SaaS, you need to evaluate risks of data leakage across tenants. Even if infra is provider’s responsibility, consumers should validate provider assurances
    - Carefully review SLAs
-
 1. Logging & Monitoring
-
     - Ensure audit logs are enabled, immutable, and integrated into your SIEM/SOC.
     - Consider API usage monitoring (abuse, brute force, token misuse).
-
 1. Incident Response & Business Continuity
     - Do we have visibility into incidents in the SaaS app?
     - Who owns and manages forensic data?
     - What is the chain of custody?
     - Are our RPO/RTO alignment with provider capabilities?
-
 1. API Security Beyond Tokens
     - Rate limiting, schema validation, abuse detection
     - Ensure APIs don’t expose sensitive metadata (error handling, verbose messages)
