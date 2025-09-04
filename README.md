@@ -124,6 +124,12 @@ Here I presented a non-structured approach to threat modeling in an Agile contex
 
 ## Annex: a TM for SaaS applications ☁️ 
 <b>A holistic approach to secure SaaS apps based on shared responsability model, generated with the help of AI</b>
+A baseline set of critical, customer-configurable security controls for SaaS vendors, should include:
+- Robust MFA
+- SSO support
+- Programmatic access to logs and configuration data
+- Visibility on IRP 
+
 
 1. Identity & Access Governance
     - Authentication & Authorization
