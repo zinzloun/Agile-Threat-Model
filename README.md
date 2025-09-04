@@ -133,7 +133,7 @@ A baseline set of critical, customer-configurable security controls for SaaS ven
 In details we should consider these areas:
 
 1. Identity & Access Governance
-    - Authentication & Authorization: integration with IdM
+    - Authentication & Authorization: integration with IdM (SSO)
     - Role lifecycle management (provisioning, de-provisioning, least privilege, JIT access)
     - Consider insider threats (ex: orphaned accounts, excessive privileges)
 1. Data management
