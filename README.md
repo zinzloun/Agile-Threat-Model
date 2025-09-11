@@ -223,8 +223,6 @@ I take for granted that you don't have any CASB in place. We can proceed, as ill
 | Configuration Management       | Baseline configs and periodic reviews                        | High      | Discovery / Defense Evasion | T1601 – Account Access, T1530 – Data from Configuration Repositories          | Security baselines applied; configuration reviews scheduled quarterly; deviations reported. |
 | Data Management                | Classification & access reviews                              | High      | Discovery              | T1083 – File and Directory Discovery, T1222 – File and Directory Permissions Modification | All sensitive data classified; access reviews conducted quarterly; misclassifications corrected. |
 
-### SaaS TM graphical representation
-Following the visual representation created in Miro, only the threats are shown. You can add green notes with mitigation user stories and place them next to the corresponding threat note. Since this approach may lead to a proliferation of notes on the diagram, it is advisable to create links pointing to the user stories instead.
+### SaaS TM attack tree
 
-
-![SaaS TM](./SaaS-TM.png)
+![SaaS TM](./at-saas.png)
