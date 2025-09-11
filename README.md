@@ -166,6 +166,17 @@ In details we should consider these areas:
     - Phishing targeting SaaS login portals
     - MFA bombing
     - Poor UX that leasds to users bypass controls (e.g., sharing files via personal email)
+  
+### Don't forget the shadow
+I take for granted that you don't have any CASB in place. We can proceed, as illustrated into the fallowing table, according to the organization's maturity level (and available tool):
+
+| Level          | Approach                          | Actions                                                                                 | Outcome                                      |
+|----------------|-----------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------|
+| **Baseline**   | Firewall/Proxy Reporting          | - Enable App-ID / URL filtering on firewall/proxy<br>- Generate monthly reports of SaaS usage<br>- Identify heavy users of unapproved SaaS | Initial **inventory** of Shadow SaaS apps and usage patterns |
+| **Intermediate** | SIEM Integration                | - Forward firewall/proxy logs to SIEM<br>- Build dashboards for new SaaS apps<br>- Create alerts on unusual uploads/downloads<br>- Conduct awareness campaigns for affected teams | Continuous **monitoring** and faster detection of risky SaaS usage |
+| **Advanced**   | Endpoint & Enforcement Controls  | - Deploy DLP agents on endpoints<br>- Apply selective blocking (denylist or allowlist SaaS categories)<br>- Use browser GPO/extensions to restrict unapproved SaaS<br>- Automate log analysis with enrichment scripts | Proactive **prevention** of data leakage and **controlled SaaS adoption** |
+| **Suggested**  | CASB (Cloud Access Security Broker) | - Discover and classify all SaaS apps in use (API-based + traffic discovery)<br>- Enforce granular security policies (per app/user/action)<br>- Integrate with SSO/MFA for unified identity and access control<br>- Monitor data in motion and at rest in SaaS platforms | Full **visibility**, fine-grained **control**, and **data protection** across all sanctioned and unsanctioned SaaS apps |
+
 
 ### A general template backlog with security user stories
 | Category                      | Threat Example                                                                 | Mitigation / Security User Story                                                                 | Priority |
@@ -214,5 +225,6 @@ In details we should consider these areas:
 
 ### SaaS TM graphical representation
 Following the visual representation created in Miro, only the threats are shown. You can add green notes with mitigation user stories and place them next to the corresponding threat note. Since this approach may lead to a proliferation of notes on the diagram, it is advisable to create links pointing to the user stories instead.
+
 
 ![SaaS TM](./SaaS-TM.png)
