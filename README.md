@@ -226,3 +226,58 @@ I take for granted that you don't have any CASB in place. We can proceed, as ill
 ### SaaS TM attack tree
 
 ![SaaS TM](./at-saas.png)
+
+Follow the Graphviz source code
+```dot
+digraph AttackTree {
+    node [shape=box, style=rounded, fontsize=10];
+
+    Root [label="Compromise SaaS Application & Access Sensitive Data", shape=ellipse, style=filled, fillcolor=lightgrey];
+
+    // Authentication & Authorization
+    Root -> Auth [label="Authentication & Authorization"];
+    Auth -> Creds [label="Steal credentials"];
+    Creds -> Phishing [label="Phishing SaaS login"];
+    Creds -> BruteForce [label="Brute force / credential stuffing"];
+    Auth -> WeakMFA [label="Exploit weak MFA"];
+    WeakMFA -> NoMFA [label="No MFA configured"];
+    WeakMFA -> Fatigue [label="MFA fatigue attacks"];
+    Auth -> APITokens [label="Abuse long-lived API tokens"];
+
+    // Data Protection
+    Root -> DataProt [label="Data Protection Gaps"];
+    DataProt -> Transit [label="Intercept data in transit (no TLS 1.2+)"];
+    DataProt -> Rest [label="Access unencrypted data at rest"];
+
+    // Identity & Access Governance
+    Root -> IAG [label="Identity & Access Governance"];
+    IAG -> Orphaned [label="Use orphaned accounts"];
+    IAG -> Excessive [label="Exploit excessive privileges"];
+
+    // Tenant Isolation
+    Root -> Tenant [label="Tenant Isolation"];
+    Tenant -> CrossLeak [label="Cross-tenant data leakage"];
+    Tenant -> SharedInfra [label="Exploit shared infra vulnerabilities"];
+
+    // Logging & Monitoring
+    Root -> Logging [label="Logging & Monitoring"];
+    Logging -> Tamper [label="Tamper or delete logs"];
+    Logging -> NoVisibility [label="Lack of audit trails"];
+
+    // Configuration Mgmt
+    Root -> Config [label="Configuration Mgmt"];
+    Config -> Sharing [label="Misconfigured sharing (public links)"];
+    Config -> Defaults [label="Insecure default settings"];
+
+    // Third-Party Integrations
+    Root -> Integrations [label="Third-Party Integrations"];
+    Integrations -> Unvetted [label="Unvetted integration exfiltrates data"];
+    Integrations -> TokenSprawl [label="Abuse token sprawl"];
+
+    // Plugins / Extensions
+    Root -> Plugins [label="Plugins / Extensions"];
+    Plugins -> Malicious [label="Malicious plugin installation"];
+    Plugins -> Persistence [label="Abuse plugin persistence"];
+}
+```
+
