@@ -167,7 +167,7 @@ In details we should consider these areas:
     - MFA bombing
     - Poor UX that leasds to users bypass controls (e.g., sharing files via personal email)
   
-### Don't forget the shadow
+### Don't forget the shadow 👻 
 I take for granted that you don't have any CASB in place. We can proceed, as illustrated into the fallowing table, according to the organization's maturity level (and available tool):
 
 | Level          | Approach                          | Actions                                                                                 | Outcome                                      |
